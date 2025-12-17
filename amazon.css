@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: #131921; 
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+.header__logo-link {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: baseline;
+}
+
+.header__logo-main {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.header__logo-sub {
+  font-size: 0.9rem;
+  margin-left: 0.1rem;
+}
+
+.header__location {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.header__location-line1 {
+  font-size: 0.75rem;
+  color: #cccccc;
+}
+
+.header__location-line2 {
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.header__location-icon {
+  margin-right: 0.25rem;
+}
+
+.header__search {
+  flex: 1;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  margin: 0 0.5rem;
+}
+
+.header__search-select {
+  border: none;
+  background-color: #f3f3f3;
+  padding: 0.5rem;
+  font-size: 0.85rem;
+}
+
+.header__search-input {
+  flex: 1;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.header__search-button {
+  border: none;
+  background-color: #febd69; 
+  padding: 0 0.75rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.header__lang {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.header__lang-code {
+  font-size: 0.85rem;
+  font-weight: bold;
+}
+
+.header__option {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0.5rem;
+  cursor: pointer;
+}
+
+.header__option-line1 {
+  font-size: 0.75rem;
+  color: #cccccc;
+}
+
+.header__option-line2 {
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.header__cart {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  padding: 0 0.5rem;
+}
+
+.header__cart-icon {
+  font-size: 1.4rem;
+}
+
+.header__cart-text {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+}
+
+.header__cart-count {
+  position: absolute;
+  top: 0;
+  left: 1.1rem;
+  background-color: #f08804;
+  color: black;
+  border-radius: 50%;
+  padding: 0 0.3rem;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-wrap: wrap;
+  }
+
+  .header__location,
+  .header__lang,
+  .header__option {
+    display: none; 
+  }
+
+  .header__search {
+    order: 3;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  .header__logo,
+  .header__cart {
+    order: 1;
+  }
+}
